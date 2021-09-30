@@ -1,0 +1,24 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="/WEB-INF/locale.tld" prefix="lng" %>
+<c:set var="lang" value="${sessionScope.session_lang}"></c:set>
+<header id="header">
+    <div class="container-fluid">
+
+        <div id="logo" class="pull-left">
+            <h1><a href="/">Cinema</a></h1>
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href=""><lng:tr text="Home" locale="${lang}"></lng:tr></a></li>
+                <li><a href="/sign_in"><lng:tr text="Login" locale="${lang}"></lng:tr></a></li>
+                <li><a href="/login"><lng:tr text="Register" locale="${lang}"></lng:tr></a></li>
+                <li><a href="/makeOrder" class="icon ion-android-cart"></a></li>
+                <li><c:if test="${not empty sessionScope.ses_role}">
+                    <a href="/logout"><h2><lng:tr text="Log_out" locale="${lang}"></lng:tr></h2></a>
+                </c:if></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header>
