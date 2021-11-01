@@ -102,7 +102,7 @@
                                                                        locale="${lang}"></lng:tr></h6></button>
             </div> <!-- form-group// -->
             <p class="text-center"><h5><lng:tr text="Have_account" locale="${lang}"/></h5> <a href="/sign_in"><lng:tr
-                text="servlets.Login" locale="${lang}"></lng:tr></a> </p>
+                text="Login" locale="${lang}"></lng:tr></a> </p>
         </form>
     </article>
 </div> <!-- card.// -->
