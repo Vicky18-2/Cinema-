@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
             req.getSession().setAttribute("ses_role", this.dao.getUserDAO().getUserByEmail(email).getRole().toString());
             req.getSession().setAttribute("session_email", email);
             req.setAttribute("success", "Account creation is successful");
-            resp.sendRedirect("/session_for_week");
+            resp.sendRedirect("/");
         } else {
             resp.sendRedirect("/login");
             req.setAttribute("error", "invalid_registration");
